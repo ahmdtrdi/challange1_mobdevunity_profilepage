@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 //import 'package:mobiledev_flutter_1/view/day3_page.dart';
 //import 'package:mobiledev_flutter_1/view/profile_page.dart';
 import 'package:mobiledev_flutter_1/model/usermodels.dart';
+// ignore: depend_on_referenced_packages
 import 'package:http/http.dart' as http;
 import 'package:mobiledev_flutter_1/stuff/iconmeasure.dart';
 import 'package:mobiledev_flutter_1/theme.dart';
@@ -36,10 +37,10 @@ class _HomePageState extends State<HomePage> {
   final double coverHeight = 280;
   final double profileHeight = 144;
   final ButtonStyle buttonPrimary = ElevatedButton.styleFrom(
-      minimumSize: Size(327, 50),
-      backgroundColor: Color.fromARGB(255, 4, 45, 78),
+      minimumSize: const Size(327, 50),
+      backgroundColor: const Color.fromARGB(255, 4, 45, 78),
       elevation: 0,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(50))));
   Future<Data> getUserData() async {
     final response = await http.get(
@@ -97,7 +98,7 @@ class _HomePageState extends State<HomePage> {
           style: poppinsTextStyle,
         ),
         const SizedBox(height: 5),
-        Text(
+        const Text(
           'Anak MobDev anjayy',
           style: TextStyle(
               fontSize: 15, color: Color.fromARGB(255, 127, 127, 127)),
@@ -126,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.only(right: 10), child: logoUni),
               Container(
                   margin: const EdgeInsets.only(right: 165),
-                  child: Text('Universitas Sam Ratulangi',
+                  child: const Text('Universitas Sam Ratulangi',
                       style: TextStyle(
                           fontSize: 15,
                           color: Color.fromARGB(255, 127, 127, 127)))),
@@ -137,7 +138,7 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.only(right: 8), child: logoCerti),
               Container(
                   margin: const EdgeInsets.only(right: 140),
-                  child: Text('Bachelor of Computer Science',
+                  child: const Text('Bachelor of Computer Science',
                       style: TextStyle(
                           fontSize: 15,
                           color: Color.fromARGB(255, 127, 127, 127))))
@@ -184,7 +185,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         const SizedBox(height: 20),
-        Column(
+        const Column(
           children: [
             Padding(
               padding: EdgeInsets.only(left: 35, right: 35),
@@ -230,7 +231,7 @@ class _HomePageState extends State<HomePage> {
             child: CircleAvatar(
               radius: profileHeight / 2,
               backgroundColor: Colors.grey.shade800,
-              backgroundImage: NetworkImage(
+              backgroundImage: const NetworkImage(
                   'https://pbs.twimg.com/media/F6i837JboAARE9u?format=jpg&name=4096x4096'),
             ),
           ),
